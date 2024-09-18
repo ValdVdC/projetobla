@@ -1,0 +1,18 @@
+.tema1{
+    background: black;
+    outline: 2px solid rgb(50,50,50);
+    color:white;
+    font-family: system-ui;
+}
+.tema2{
+    background: antiquewhite;
+    outline: 2px solid rgb(50,50,50);
+    color:black;
+    font-family: system-ui;
+}
+.tema3{
+    background: rgb(81, 109, 128);
+    outline: 2px solid rgb(50,50,50);
+    color:rgb(255, 255, 255);
+    font-family: system-ui;
+}
