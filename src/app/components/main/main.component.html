@@ -1,1 +1,43 @@
-<p>main works!</p>
+<!-- <article>
+    <h1>Diretivas estruturais - ngIf - primeira forma</h1>
+    <p *ngIf="isLogged">O usuário está logado!</p>
+    <p *ngIf="!isLogged">O usuário não está logado!</p>
+</article>
+<article>
+    <h1>Diretivas estruturais - ngIf - segunda forma</h1>
+    <p *ngIf="isLogged; else contrario">O usuário está logado!</p>
+    <ng-template #contrario>
+        <p>O usuário não está logado</p>
+    </ng-template>
+</article>
+
+<article>
+    <h1>Diretiva estrutural - ngFor </h1>
+    <div class="aulas">
+        <p *ngFor="let aula of aulas; let i =index">
+          {{i+1}} | {{aula}}
+        </p>
+    </div>
+</article>
+<article>
+    <h1>Misturas - ngIf e ngFor</h1>
+    <div class="if" *ngIf="usuarios.length>0">
+        <div class="for" *ngFor="let usuario of usuarios">
+            <h1>{{usuario.nome}}</h1>
+            <p>{{usuario.aula}}</p>
+        </div>
+    </div>
+    <div class="if" *ngIf="usuarios.length==0">
+        <p>Não há professor cadastrado, nem aula</p>
+    </div>
+</article> -->
+
+<article>
+    <input type="text" (keyup.enter)="cadastrar($event)">
+    <div *ngIf="nomes.length>0">
+        <p *ngFor="let nome of nomes">{{nome}}</p>
+    </div>
+    <div *ngIf="nomes.length==0">
+        p>Nenhum nome cadastrado</p>
+    </div>
+</article>
