@@ -31,13 +31,51 @@
         <p>Não há professor cadastrado, nem aula</p>
     </div>
 </article> -->
-
+<!-- 
 <article>
     <input type="text" (keyup.enter)="cadastrar($event)">
     <div *ngIf="nomes.length>0">
         <p *ngFor="let nome of nomes">{{nome}}</p>
     </div>
     <div *ngIf="nomes.length==0">
-        p>Nenhum nome cadastrado</p>
+        <p>Nenhum nome cadastrado</p>
     </div>
-</article>
+</article> -->
+<!-- tem questão de multiplicidade e n sei oq elvis -->
+
+<section appMudaCor>
+    <!-- enconder ou mostrar algum template por comparação -->
+    <h1>ngIf - primeira forma</h1>
+    <div class="usuario-container">
+        <p *ngIf="isLogged">Nome:{{usuario?.nome}} Idade:{{usuario?.idade}} [elvis operator (?)]</p>
+        <p *ngIf="!isLogged"> Usuário não logado </p>
+    </div>
+    <h1>ngIf - segunda forma</h1>
+    <div class="usuario-container">
+        <p *ngIf="isLogged;else contrario">Nome:{{usuario?.nome}} Idade:{{usuario?.idade}} [elvis operator (?)]</p>
+        <ng-template #contrario>
+            <p> Usuário não logado</p>
+        </ng-template>
+       </div>
+       <input type="button" value="alterna"(click)="isLogged=!isLogged">
+</section>
+<section>
+    <h1>ngFor</h1>
+    <div class="paises-container">
+        <h1>Lista de países para viajar</h1>
+        <p *ngFor="let pais of paises; let i =index">{{i+1}}º - {{pais}}</p>
+    </div>
+</section>
+<section>
+    <h1>ngIf e ngFor - Juntos</h1>
+    <input type="text" (keyup.enter)="inserirNome(novoNome.value)" #novoNome>
+    <div class="nomes-container" *ngIf="nomes.length>0; else nao">
+        <p *ngFor="let nome of nomes">{{nome}}</p>
+    </div>
+    <ng-template #nao>
+        <p>Nenhum nome inserido</p>
+    </ng-template>
+</section>
+<section>
+    <input type="text" appBackCor>
+</section>
