@@ -1,0 +1,15 @@
+<section>
+    <h1>Buscador de bixo</h1>
+    <input type="text" (keyup.enter)="getPokemon($event)">
+    <div class="card" *ngIf="pokemon">
+        <img src="{{pokemon.sprites.other.showdown.front_shiny}}" alt="">
+        <h1>{{pokemon?.name}}</h1>
+        <p>{{pokemon?.id}}</p>
+    </div>
+    <div class="card" *ngIf="!pokemon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg" alt="">
+        <h1>SEM NOME</h1>
+        <p>SEM ID</p>
+    </div>
+</section>
+<!-- <button (click)="getPokemon()">clica</button> -->
